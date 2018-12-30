@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Based on the "Band" theme from www.w3schools.com - No Copyright -->
+    
+    
+  <title>GAME OVER!</title>
+    
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Allows for Ajax calls  -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> <!-- Uses BootStrap -->
+
+    
+    
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      background-image: url("https://ia601508.us.archive.org/0/items/106826_201705/106826.jpg");
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 50px;
+      color: white;
+      font-style: italic;
+  }
+      .level12{
+          
+        align-content: center;
+           width: 200x;
+      height: 120px;
+           margin-left:220px;;
+          
+          
+      }
+      em{
+          
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 50px;
+      color: white;
+      font-style: italic;
+          
+      }
+      
+  .container {
+      padding: 80px 120px;
+  }
+  .level {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .level:hover {
+      border-color: #f1f1f1;
+      }
+  .bg-1 {
+      background: #2d2d30;
+      background-color: black;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+      p5{
+        
+    margin-left:260px;
+      }
+      
+     button{
+  background: #04558a;
+  background-image: -webkit-linear-gradient(top, #04558a, #2b3db8);
+  background-image: -moz-linear-gradient(top, #04558a, #2b3db8);
+  background-image: -ms-linear-gradient(top, #04558a, #2b3db8);
+  background-image: -o-linear-gradient(top, #04558a, #2b3db8);
+  background-image: linear-gradient(to bottom, #04558a, #2b3db8);
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 27px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+margin-top:20px; 
+    margin-left:330px;
+
+   
+   
+}
+
+      button:hover {
+  background: #0e93c4;
+  background-image: -webkit-linear-gradient(top, #0e93c4, #3498db);
+  background-image: -moz-linear-gradient(top, #0e93c4, #3498db);
+  background-image: -ms-linear-gradient(top, #0e93c4, #3498db);
+  background-image: -o-linear-gradient(top, #0e93c4, #3498db);
+  background-image: linear-gradient(to bottom, #0e93c4, #3498db);
+  text-decoration: none;
+}
+          
+      }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://archive.org/embed/GameplayFootage">GAME OVER!</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="high-score.html">HIGH SCORE</a></li>
+          </ul>
+   
+    </div>
+  </div>
+</nav>
+
+<div id="band" class="container text-center">
+  <h3>GAME OVER!</h3>
+
+  <p>The roots of the "GAME OVER!" project are found in a Unity model; however using this as a learning tool and a jumping off point. The concept is to create an ambient experience with gameplay and difficulty of games like the classic <a href=" https://en.wikipedia.org/wiki/Ikaruga">"Ikaruga" </a> and other Dreamcast games of that time. 
+      <br>
+       <br>
+
+"GAME OVER!" is made with the Unity Engine and employs features found within to bring unique and fun gameplay to the player.  There is a strong emphases on challenge; as the game is meant to push the player as they attempt to use the environment and the game mechanics themselves to try beat the high score. <br>
+       <br>
+Currently the project is on "Build 14" which is the beat that will be submitted for the college project. This has worked in the feedback and improvements from the PC based BETA Testing of “Build 11”.
+      
+Please have a look at the Game play footage of “Build 11” found below and screenshots of "Build 14" that is still in development.
+   <br>
+
+      Click <a href="https://archive.org/download/GameOverBuild11/GameOver%21%20-%20Build11.rar">here</a> to download "Build 11" of the game. After download, just unzip and enjoy.
+      
+       <br>
+      <br>
+      
+      </p>
+    
+   
+    
+
+    <iframe src="https://archive.org/embed/GameplayFootage" width="560" height="384" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+        
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Build 10</strong><style>
+body {
+        color:white;
+}
+</style></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="Level.jpg" class="img-circle level"alt="Random Name" width="255" height="300">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Mid Build</p>
+        <p>Very Difficult</p>
+        <p>March 2017</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Build 11</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="Level2.jpg" class="img-circle" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Current Build</p>
+        <p>Easier</p>
+        <p>April 2017</p>
+        <p>Click <a href="https://archive.org/download/GameOverBuild11/GameOver%21%20-%20Build11.rar">here</a> to download "Build 11" of the game.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Build 14</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="ScreenShot.jpg" class="img-circle" alt="Random Name" width="255" height="255">
+      </a>
+  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">GET THE MUSIC OF THE GAME</h3>
+    <p class="text-center">
+
+32x provide the music of the game with a custom soundtrack along with tracks from their "Simulacra And Simulation" album.
+        <br>
+      <br>
+    
+        
+"Simulacra And Simulation" is a concept album about the nature of AI, and its relationship to the wider world. What happens if an AI becomes self aware and triggers its own demise? The 2017 remaster of "Simulacra And Simulation" expands the original album with two new tracks and completes the concept as originally intended. 
+<br><br>
+    
+       
+        32x is a vaporwave, electronica, ambient project and is dedicated to Philip K. Dick.</p>
+      <br>
+      
+      
+      
+      <p5><img src="https://f4.bcbits.com/img/a4123938311_10.jpg" align = "middle" width="400" height="300"</p5>
+          
+
+
+<button onclick> <a href="https://32xproject.bandcamp.com/releases">GET MUSIC HERE</button>
+       
+      <br>
+      <br>
+    
+                    <img src="mwu-logo-rgb.png" class="level12" alt="Random Name" width="500" height="200"
+</body>
+</html>
